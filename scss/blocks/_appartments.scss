@@ -1,0 +1,30 @@
+.appartments {
+    position: relative;
+
+    &::before {
+        content: "III";
+
+        right: calc(50% + 555px);
+        transform: translate(50%, 0%);
+        
+        @include decorNumber();
+    }
+}
+
+.appartments__title {
+    margin: 0 0 88px 0;
+
+    @include mediaTablet {
+        margin: 0 0 44px 0;
+    }
+}
+
+.appartments__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mediaTablet {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}
